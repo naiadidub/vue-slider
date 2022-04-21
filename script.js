@@ -59,6 +59,13 @@ const app = new Vue (
                 console.log(index)
                 console.log(this.currentIndex)
             }
+        },
+        mounted() {
+
+            setInterval(()=>{
+                this.currentIndex ++
+            }, 3000)
+        
         }
     }
 )
