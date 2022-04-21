@@ -38,7 +38,7 @@ const app = new Vue (
         methods: {
             previous(){
                 if(this.currentIndex === 0 ){
-                    this.currentIndex = slides.length
+                    this.currentIndex = 4
                     
                 } else {
                     this.currentIndex --
@@ -53,6 +53,11 @@ const app = new Vue (
                     this.currentIndex ++
                     
                 }
+            },
+            selected(index){
+                this.currentIndex = index
+                console.log(index)
+                console.log(this.currentIndex)
             }
         }
     }
