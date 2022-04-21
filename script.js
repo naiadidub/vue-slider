@@ -31,27 +31,27 @@ const app = new Vue (
                 }
             ],
             currentIndex : 0,
-            thumbIndex : 0,
+            
         },
          
         
         methods: {
             previous(){
-                if(this.currentIndex === 0 && this.thumbIndex === 0){
-                    this.currentIndex = 4
-                    this.thumbIndex = 4
+                if(this.currentIndex === 0 ){
+                    this.currentIndex = slides.length
+                    
                 } else {
                     this.currentIndex --
-                    this.thumbIndex --
+                    
                 }
             },
             prox(){
-                if(this.currentIndex === 4 && this.thumbIndex === 4){
+                if(this.currentIndex === 4 ){
                     this.currentIndex = 0
-                    this.thumbIndex = 0
+                    
                 } else {
                     this.currentIndex ++
-                    this.thumbIndex ++
+                    
                 }
             }
         }
