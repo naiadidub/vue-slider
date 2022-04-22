@@ -38,7 +38,7 @@ const app = new Vue (
         methods: {
             previous(){
                 if(this.currentIndex === 0 ){
-                    this.currentIndex = 4
+                    this.currentIndex = this.slides.length - 1
                     
                 } else {
                     this.currentIndex --
@@ -46,7 +46,7 @@ const app = new Vue (
                 }
             },
             prox(){
-                if(this.currentIndex === 4 ){
+                if(this.currentIndex === this.slides.length - 1){
                     this.currentIndex = 0
                     
                 } else {
@@ -63,7 +63,7 @@ const app = new Vue (
         mounted() {
 
             setInterval(()=>{
-                this.currentIndex ++
+                this.prox()
             }, 3000)
         
         }
